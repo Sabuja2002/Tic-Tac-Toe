@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  font-family: "Poppins", "sans-serif";
+}
+.outer{
+  display: flex;
+  flex-direction: row;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./gradient-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+.game-info {
+  color: white;
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25) ;
+}
+.tic-tac-toe {
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  max-width: 20rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  /* backdrop-filter: blur(7px); */
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  font-size: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1,
+.box2,
+.box4,
+.box5 {
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.box3,
+.box6 {
+  border-bottom: 2px solid white;
+}
+.box7,
+.box8 {
+  border-right: 2px solid white;
+}
+.btn {
+  color: white;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
+  /* backdrop-filter: blur(7px); */
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 150ms ease-in-out;
+}
+
+.btn.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.win{
+  background-color: rgba(0,255,0,0.30);
+}
+
+.winning-box{
+  position: absolute;
+  margin-top: 0;
+}
+
+.anupam{
+  position: absolute;
+  color: white;
+  margin-left: 0;
+  margin-top: 19rem;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  border: 1px solid red;
+  background-color: rgba(255, 255, 255, 0.15);
+  /* transform: translateX(-100%); */
+
+}
+.sabuja{
+  position: absolute;
+  color: white;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 19rem;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  border: 1px solid red;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateX(80rem);
+
+}
+
